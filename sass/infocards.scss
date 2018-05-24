@@ -1,0 +1,133 @@
+// infocards 
+.infocards {
+    background-color: #007239;
+    padding: 50px 0;
+    .infocard {
+        text-align: center;
+        width: 80%;
+        margin: 0 auto 25px auto;
+        background-color: rgba(255,255,255,.9);
+        padding: 25px;
+        box-sizing: border-box;
+        max-width: 650px;
+    }
+    h2 {
+        font-size: 22px;
+        span {
+            font-size: 37px;
+        }
+    }
+    p {
+        font-size: 11px;
+        line-height: 14px;
+    }
+    .infocard-trees {
+        max-height: 75px;
+    }
+    .infocard-centennial {
+        max-height: 60px;
+    }
+    .infocard-netzero {
+        max-height: 60px;
+    }
+    .infocard-twotree {
+        max-height: 60px;
+    }
+}
+
+
+@media screen and (min-width: "768px") {
+    .infocards {
+        background-color: transparent;
+        padding: 100px 0;
+        perspective: 600px;
+        .infocard {
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // animation: hideInfoCard 2s 1;
+            // animation-fill-mode: forwards;
+            // transition: all 1s;
+            img, svg {
+                margin: 80px 0;
+            }
+            margin: 0 auto 100px auto;
+        }
+        &.one {
+            .infocard:nth-child(1) {
+                animation: showInfoCard 2s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        &.two {
+            .infocard:nth-child(2) {
+                animation: showInfoCard 2s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        &.three {
+            .infocard:nth-child(3) {
+                animation: showInfoCard 2s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        &.four {
+            .infocard:nth-child(4) {
+                animation: showInfoCard 2s 1;
+                animation-fill-mode: forwards;
+            }
+        }
+        h2 {
+            font-size: 31px;
+            span {
+                font-size: 53px;
+            }
+        }
+        hr {
+            border-top: 2px solid #ccc;
+            margin: 1em auto;
+        }
+        .infocard-trees {
+            max-height: 125px;
+        }
+        .infocard-centennial {
+            max-height: 100px;
+        }
+        .infocard-netzero {
+            max-height: 120px;
+        }
+        .infocard-twotree {
+            max-height: 100px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 25px;
+            max-width: 420px;
+        }
+    }
+
+}
+
+
+
+@keyframes hideInfoCard {
+  0% {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+  100% { 
+      opacity: 0;
+      transform: translate(-50%, -80%);
+  }
+}
+
+@keyframes showInfoCard {
+  0% {
+      opacity: 0;
+      transform: translate(-50%, -20%);
+  }
+  100% { 
+      opacity: 1;
+      transform: translate(-50%, -50%);
+  }
+}

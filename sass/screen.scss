@@ -1,0 +1,190 @@
+
+
+@import 'reset';
+@import 'defaults';
+@import 'header';
+@import 'hero';
+@import 'infocards';
+@import 'status';
+@import 'share';
+
+html { 
+    overflow: scroll !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #e4e3e4;
+    // box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+video {
+    display: none;
+}
+
+header {
+    position: relative;
+}
+
+// sections
+//intro 
+.intro {
+    width: 100%;
+    margin: 0;
+    padding: 30px 5%;
+    hr {
+        border-top: 2px solid #ccc;
+        width: 40px;
+        margin: 0 auto 18px auto;
+        @media screen and (min-width: "768px") {
+            width: 120px;
+        }
+    }
+}
+section {
+    background-color: #e4e3e4;
+}
+h2 {
+    font-family: bebas-neue, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    color: #6ba537;
+    -webkit-font-smoothing: antialiased;
+    line-height: 30px;
+    text-align: center;
+}
+
+p {
+    font-size: 13px;
+    text-align: center;
+    line-height: 22px;
+    color: #746d5d;
+}
+
+#contact-us-cta {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    text-decoration: none;
+    z-index: 1000;
+}
+#canvas {
+    position: fixed;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+}
+@media screen and (min-width: "768px") {
+    #contact-us-cta {
+        display: none;
+    }
+}
+// social
+.social {
+    text-align: center;
+    box-sizing: border-box;
+    img {
+        width: 33.33%;
+        float:left;
+    }
+    #follow {
+        background-color: #007239;
+        color: white;
+        padding: 7px 20px;
+        text-align: center;
+        display: inline-block;
+        text-decoration: none;
+        margin: 2em auto 4em auto;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+//svg random
+.st0{fill:#FFC600;}
+.st1{fill:#6BA537;}
+.st2{fill:#6AA9DC;}
+.st3{font-family:bebas-neue, sans-serif;}
+.st4{font-size:56.6969px;}
+
+
+@media screen and (min-width: "768px") {
+    .intro {
+        padding: 60px 0 90px 0 !important;
+        width: 100% !important;
+        hr {
+            border-top: 3px solid #ccc;
+            margin: 0 auto 28px auto;
+            width: 120px;
+        }
+    }
+    .wrapper {
+        width: 90%;
+        margin: 0;
+        padding: 0 5%;
+    }
+    h2, p {
+        margin: .83em auto;
+        max-width: 700px;
+    }
+    h2 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    p {
+        font-size: 26px;
+        line-height: 44px;
+    }
+    // video {
+    //     display: block;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     width: 100%;
+    //     height: 100%;
+    //     object-fit: cover;
+    //     z-index: -1;
+    // }
+    #video-bg {
+        position: fixed;
+        z-index: -1;
+        top: 0; right: 0; bottom: 0; left: 0;
+        overflow: hidden;
+    }
+    #video-bg > video {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    /* 1. No object-fit support: */
+    @media (min-aspect-ratio: 16/9) {
+        #video-bg > video { height: 300%; top: -100%; }
+    }
+    @media (max-aspect-ratio: 16/9) {
+        #video-bg > video { width: 300%; left: -100%; }
+    }
+    /* 2. If supporting object-fit, overriding (1): */
+    @supports (object-fit: cover) {
+        #video-bg > video {
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: "1000px") {
+    h2, p {
+        max-width: 880px;
+    }
+}
