@@ -123,23 +123,19 @@
             }
             &.slide-one {
                 left: 0;
-                // background-image: url('../img/touch_tree.gif');
-                background-image: url('../img/touch_tree.jpg');
+                background-image: url('../img/slide-one.jpg');
                 background-position: center right;
             }
             &.slide-two {
                 left: 33.33vw;
                 top: 0;
-                // background-image: url('../img/girl_sitting.gif');
-                background-image: url('../img/girl_sitting.jpg');
+                background-image: url('../img/slide-two.jpg');
                 background-position: center right;
             }
             &.slide-three {
                 right: 0;
                 top: 0;
-                // background-image: url('../img/deer_eating.gif');
-                background-image: url('../img/deer_eating.jpg');
-                // background-position: center right;
+                background-image: url('../img/slide-three.jpg');
             }
             &.animated {
                 transition: none;
